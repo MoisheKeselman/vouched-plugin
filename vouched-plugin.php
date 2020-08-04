@@ -30,3 +30,14 @@ along with Vouched Plugin. If not, see https://github.org/moisheplugin.
 */
 
 defined( 'ABSPATH' ) or die('Your identity has not been verified...');
+
+// using namespaces
+if ( file_exists(dirname(__FILE__) . '/vendor/autoload.php') ){
+    require_once dirname(__FILE__) . '/vendor/autoload.php';
+}
+
+// set up settings
+use Admin\Settings;
+Settings::main();
+
+
